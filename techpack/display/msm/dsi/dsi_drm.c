@@ -355,6 +355,7 @@ int dsi_bridge_interface_enable(int timeout)
 }
 EXPORT_SYMBOL(dsi_bridge_interface_enable);
 #endif
+/*
 static int dsi_bridge_get_panel_info(struct drm_bridge *bridge, char *buf)
 {
 	int rc = 0;
@@ -370,6 +371,7 @@ static int dsi_bridge_get_panel_info(struct drm_bridge *bridge, char *buf)
 
 	return rc;
 }
+*/
 
 static void dsi_bridge_enable(struct drm_bridge *bridge)
 {
@@ -511,7 +513,7 @@ int set_touchpanel_recovery_callback(touchpanel_recovery_cb_p_t cb)
 }
 EXPORT_SYMBOL(set_touchpanel_recovery_callback);
 #endif
-
+/*
 static void prim_panel_off_delayed_work(struct work_struct *work)
 {
 	//mutex_lock(&gbridge->base.lock);
@@ -526,9 +528,9 @@ static void prim_panel_off_delayed_work(struct work_struct *work)
 		return;
 	}
 	//mutex_unlock(&gbridge->base.lock);
-#endif
 }
-
+*/
+#endif
 static void dsi_bridge_mode_set(struct drm_bridge *bridge,
 				struct drm_display_mode *mode,
 				struct drm_display_mode *adjusted_mode)
